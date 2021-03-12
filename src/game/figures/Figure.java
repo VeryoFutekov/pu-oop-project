@@ -1,6 +1,6 @@
 package game.figures;
 
-import game.player.Player;
+import game.Player;
 
 import java.awt.*;
 
@@ -30,14 +30,14 @@ public abstract class Figure {
 
     }
 
-    public String getTypeName(){
+    public String getTypeName() {
 
         return this.getClass().getSimpleName();
     }
 
-    public void render(Graphics g,int x,int y){
+    public void render(Graphics g, int x, int y) {
         g.setColor(color);
-        g.drawString(type,x+50,y+50);
+        g.drawString(type, x + 50, y + 50);
     }
 
     @Override
