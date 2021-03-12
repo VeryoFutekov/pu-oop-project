@@ -20,21 +20,22 @@ public class Field {
         this.currentFigure = null;
     }
 
+    /**
+     * render method
+     *
+     * @param  g Graphics g
+     */
     public void render(Graphics g) {
-        if (currentFigure == null) {
-            g.setColor(color);
-            g.fillRect(x, y, Field.FIELD_SIZE, Field.FIELD_SIZE);
-        } else {
-            g.setColor(Color.white);
-        }
+
+        g.setColor(color);
+        g.fillRect(x, y, Field.FIELD_SIZE, Field.FIELD_SIZE);
+
 
         g.setColor(Color.BLACK);
         g.drawRect(x, y, Field.FIELD_SIZE, Field.FIELD_SIZE);
     }
 
-    public void setCurrentFigure(Figure currentFigure) {
-        this.currentFigure = currentFigure;
-    }
+
 
     public void setX(int x) {
         this.x = x * FIELD_SIZE;

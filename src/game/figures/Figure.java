@@ -35,6 +35,12 @@ public abstract class Figure {
         return this.getClass().getSimpleName();
     }
 
+    /**
+     * render method
+     * @param g
+     * @param x
+     * @param y
+     */
     public void render(Graphics g, int x, int y) {
         g.setColor(color);
         g.drawString(type, x + 50, y + 50);

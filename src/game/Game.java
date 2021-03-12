@@ -9,6 +9,10 @@ public class Game extends JFrame implements MouseListener {
     private Field[][]fields;
 
 
+    /**
+     * constructor
+     * @throws HeadlessException err
+     */
     public Game() throws HeadlessException {
         super("Kursov proekt");
         super.addMouseListener(this);
@@ -21,6 +25,9 @@ public class Game extends JFrame implements MouseListener {
 
     }
 
+    /**
+     * init of the field
+     */
     private void initFields() {
 
             generateBattleField();
@@ -30,6 +37,9 @@ public class Game extends JFrame implements MouseListener {
 
     }
 
+    /**
+     * generate battlefield
+     */
     private void generateBattleField() {
         for (int row = 2; row <= 4; row++) {
             for (int col = 0; col < 9; col++) {
@@ -38,6 +48,12 @@ public class Game extends JFrame implements MouseListener {
             }
         }
     }
+
+    /**
+     * generate player battleground
+     * @param fromRow from
+     * @param toRow to
+     */
     private void generatePlayerBG(int fromRow, int toRow) {
         Color currentColor = Color.GRAY;
 
@@ -53,6 +69,10 @@ public class Game extends JFrame implements MouseListener {
     }
 
 
+    /**
+     * paint method
+     * @param g
+     */
     @Override
     public void paint(Graphics g) {
         super.paint(g);
